@@ -1,5 +1,6 @@
 \appendixpage
 \begin{appendices}
+	\lfoot{}
 	\section{Топлинно синхотронно излъчване от релативистка плазма}
 	
 	Механизмът на синхотронно излъчване е добре изучен (CITE HERE), но пълното му извеждане, започвайки от първи принципи (т.е. от уравненията на Максуел), трудно се намира в литературата (частични изводи могат да бъдат намерени в CITE HERE). За пълнота на изложението в този дисертационен труд, тук ще представим пълното извеждане на функциите на излъчване от свръхрелативистки заредена плазма в термодинамично равновесие.
@@ -17,8 +18,8 @@
 	Тогава решенията в цялото пространство могат да се запишат чрез закъсняващите функциите на Грийн като:
 	\begin{equation}
 		\begin{split}
-			&U\left(\vec{r},t\right) = \frac{1}{4\pi\epsilon_0}\int_{R^3}\int_{t^{\,\prime}} \rho(\vec{r}^{\,\prime},t)\frac{\delta\left(t^\prime - \left[t - \frac{\vert \vec{r} - \vec{r}^{\,\prime}\vert}{c}\right]\right)}{\vert \vec{r} - \vec{r}^{\,\prime}\vert}d^3\vec{r}^{\,\prime} dt^\prime\\
-			&\vec{A}\left(\vec{r},t\right) = \frac{\mu_0}{4\pi}\int_{R^3}\int_{t^{\,\prime}} \vec{j}(\vec{r}^{\,\prime},t)\frac{\delta\left(t^\prime - \left[t - \frac{\vert \vec{r} - \vec{r}^{\,\prime}\vert}{c}\right]\right)}{\vert \vec{r} - \vec{r}^{\,\prime}\vert}d^3\vec{r}^{\,\prime} dt^\prime		
+			&U\left(\vec{r},t\right) = \frac{1}{4\pi\epsilon_0}\int_{R^3}\int_{t^{\,\prime}} \rho(\vec{r}^{\,\prime},t)\frac{\delta\left(t^\prime - \left[t - \frac{\vert \vec{r} - \vec{r}^{\,\prime}\vert}{c}\right]\right)}{\vert \vec{r} - \vec{r}^{\,\prime}\vert}dt^\prime d^3\vec{r}^{\,\prime}\\
+			&\vec{A}\left(\vec{r},t\right) = \frac{\mu_0}{4\pi}\int_{R^3}\int_{t^{\,\prime}} \vec{j}(\vec{r}^{\,\prime},t)\frac{\delta\left(t^\prime - \left[t - \frac{\vert \vec{r} - \vec{r}^{\,\prime}\vert}{c}\right]\right)}{\vert \vec{r} - \vec{r}^{\,\prime}\vert}dt^\prime		d^3\vec{r}^{\,\prime} 
 		\end{split}
 	\end{equation} 
 	
@@ -286,7 +287,7 @@
 \end{equation}
 и получаваме за Фурие амплитудата:
 \begin{equation}
-	\vec{A}(\omega) = -\frac{i\omega\beta q}{4\sqrt{2\pi^3\epsilon_0 c}}\frac{\rho}{c}\sqrt{\frac{1}{\gamma^2}+\theta^2}e^{i\omega r}\bigintsss_{-\infty}^\infty\left\{\theta \vec{e}_\perp + x\sqrt{\frac{1}{\gamma^2} + \theta^2}\vec{e}_\perp\right\}e^{i\frac{3}{2}\xi\left(x - \frac{x^3}{3}\right)}dx
+	\vec{A}(\omega) = -\frac{i\omega\beta q}{4\sqrt{2\pi^3\epsilon_0 c}}\frac{\rho}{c}\sqrt{\frac{1}{\gamma^2}+\theta^2}e^{i\omega r}\bigintsss_{-\infty}^\infty\left\{\theta \vec{e}_\perp + x\sqrt{\frac{1}{\gamma^2} + \theta^2}\vec{e}_\parallel\right\}e^{i\frac{3}{2}\xi\left(x - \frac{x^3}{3}\right)}dx
 \end{equation}
 Нека разгледаме двата члена поотделно, започвайки с $\vec{A}_\perp$:
 \begin{equation}
@@ -319,9 +320,9 @@
 \begin{equation}
 	\frac{dE}{d\omega d\Omega} = \frac{q^2\beta^2}{12\pi^3\epsilon_0 c}\left(\frac{\rho\omega}{c}\right)^2\left(\frac{1}{\gamma^2}+\theta^2\right)^2\left[\text{K}^2_{\frac{2}{3}}(\xi) + \frac{\theta^2}{\frac{1}{\gamma^2} + \theta^2}\text{K}^2_{\frac{1}{3}}(\xi)\right]
 \end{equation}
-Интегрирайки горният израз по $\Omega$ получаваме количеството енергия, излъчена на единица честота през \emph{целият} период на излъчване. На това интегриране обаче, трябва да се обърне специално внимание. Изразът (А.38) е в термини на ъгловите координати въведени във фигура \ref{Emission_Frame_2}. Сферичната мярка тогава ще бъде $d\Omega = \cos\theta d\theta d\phi \approx \sin(\alpha + \theta) d\theta d\phi $. Където сме въвели \emph{ъгъла на усукване}, $\alpha \approx \frac{\pi}{2}$, между вектора на скоростта на заряда $\vec{\beta}$ и вектора на локалното магнитно поле $\vec{B}$. С това допускаме частично спираловидно движение на заряда спрямо магнитните силови линии.
+Интегрирайки горният израз по $\Omega$ получаваме количеството енергия, излъчена на единица честота през \emph{целият} период на излъчване. На това интегриране обаче, трябва да се обърне специално внимание. Изразът (А.38) е в термини на ъгловите координати въведени във фигура \ref{Emission_Frame_2}. Сферичната мярка тогава ще бъде $d\Omega = \cos\theta d\theta d\phi \approx \sin(\alpha + \theta) d\theta d\phi $. Където сме въвели \emph{ъгъла на усукване}, $\alpha \approx \frac{\pi}{2}$, между вектора на скоростта на заряда $\vec{\beta}$ и този на локалното магнитно поле $\vec{B}$. С това допускаме частично спираловидно движение на заряда спрямо магнитните силови линии.
 \begin{equation}
-	\frac{dE}{d\omega} = \int \frac{dE}{d\omega d\Omega} \sin(\alpha + \theta) d\theta d\phi \approx 2\pi \sin\alpha \int_{-\infty}^\infty \frac{dE}{d\omega d\Omega}d\theta:=\frac{dE}{d\omega}\bigg\vert_\parallel + \frac{dE}{d\omega}\bigg\vert_\perp.
+	\frac{dE}{d\omega} \approx \int \frac{dE}{d\omega d\Omega} \sin(\alpha + \theta) d\theta d\phi \approx 2\pi \sin\alpha \int_{-\infty}^\infty \frac{dE}{d\omega d\Omega}d\theta:=\frac{dE}{d\omega}\bigg\vert_\parallel + \frac{dE}{d\omega}\bigg\vert_\perp.
 \end{equation}
 Тук отново сме използвали граничното поведение на диаграмата на излъчване при $\beta\rightarrow 1$ за да направим някой опростения:\\
 
@@ -329,5 +330,89 @@
 
 2) Понеже всичкото лъчение е съсредоточено в малка околност около вектора на скоростта $\vec{\beta}$, можем да приемем, че $\sin(\alpha + \theta)\approx \sin\alpha\approx\text{const}$ по време на излъчването в направление $\vec{R}_0$.  \\
 
-3) Излъчването е периодично по $\theta$, но приемайки приближение (А.29) ние разглеждаме, лъчението от само една "орбита", при което математически нарушаваме периодичността. Следствие от това е появата на функции на Бесел, които асимптотично клонят към 0 при $|\theta| >> 1$. Следователно можем да разширим границите на интегриране до $\{-\infty, \infty\}$
+3) Излъчването е периодично по $\theta$, но приемайки приближение (А.29) ние разглеждаме, лъчението от само една "орбита", при което математически нарушаваме периодичността. Следствие от това е появата на функции на Бесел, които асимптотично клонят към 0 при $|\theta| >> 1$. Следователно можем да разширим границите на интегриране до $\{-\infty, \infty\}$\\
+
+Нека сега пресметнем десните величини в израз (А.39). Понеже в интеграционните променливи от изрази (А.33) и (А.36) се крие зависимост от ъгъла $\theta$, ще направим обратното на (А.30) полагане и ще въведем нова променлива $\theta^2_\gamma = \frac{1}{\gamma^2} + \theta^2$. Тогава имаме:
+\begin{equation}
+	\begin{split}
+		&\frac{dE}{d\omega}\bigg\vert_\parallel = \frac{q^2\beta^2}{6\pi^2\epsilon_0 c}\left(\frac{\rho\omega}{c}\right)^2\sin\alpha \int_{-\infty}^\infty \theta_\gamma^4 \text{K}^2_{\frac{2}{3}}\left(\frac{\omega\rho}{3 c}\theta_\gamma^3\right)d\theta\\
+		&\frac{dE}{d\omega}\bigg\vert_\perp = \frac{q^2\beta^2}{6\pi^2\epsilon_0 c}\left(\frac{\rho\omega}{c}\right)^2\sin\alpha \int_{-\infty}^\infty \theta^2\theta_\gamma^2 \text{K}^2_{\frac{1}{3}}\left(\frac{\omega\rho}{3 c}\theta_\gamma^3\right)d\theta
+	\end{split}
+\end{equation}
+\subsubsection{Пресмятане на $\frac{dE}{d\omega}\big\vert_\parallel$}
+Връщайки полагането от (А.30) в израз (А.36) и неговото комплексно спрегнато, можем да запишем $\text{K}^2_{\frac{2}{3}}\left(\frac{\omega\rho}{3 c}\theta_\gamma^3\right)$ в интегрална форма като:
+\begin{equation}
+\text{K}^2_{\frac{2}{3}}\left(\frac{\omega\rho}{3 c}\theta_\gamma^3\right) = 	\frac{3}{4}\frac{1}{\theta_\gamma^4}\int_{-\infty}^\infty \int_{-\infty}^\infty e^{ia\left(\theta_\gamma^2[x - y] + \frac{1}{3}[x^3 - y^3]\right)}xydxdy,
+\end{equation}
+където сме въвели нови променливи $x = \frac{c}{\rho}t_0$, $y = \frac{c}{\rho} t_0^\prime$, $a = \frac{\omega\rho}{2c}$. Сега извършваме още една смяна на променливите и дефинираме $2u = x + y$ $2v = x - y$. Тогава получаваме следният израз:
+\begin{equation}
+	\text{K}^2_{\frac{2}{3}}\left(\frac{\omega\rho}{3 c}\theta_\gamma^3\right) = 	\frac{3}{2}\frac{1}{\theta_\gamma^4}\int_{-\infty}^\infty du e^{2ia\left(\theta_\gamma^2 u + \frac{1}{3}u^3\right)}\int_{-\infty}^{\infty}\left(v^2 - u^2\right)e^{2iauv^2}dv
+\end{equation}
+Извършваме интегрирането по $v$, след което заместваме в (А.40) и интегрираме по $\theta$ за да получим:
+\begin{equation}
+	\int_{-\infty}^\infty \theta_\gamma^4 \text{K}^2_{\frac{2}{3}}\left(\frac{\omega\rho}{3 c}\theta_\gamma^3\right)d\theta = -\frac{3}{2}i\frac{\pi c}{\omega\rho}\int_{-\infty}^\infty du e^{2ia\left(\frac{u}{\gamma^2} + \frac{1}{3}u^3\right)}\left(u + \frac{c}{\omega\rho}\frac{1}{2iu^2}\right)
+\end{equation}
+Членът в подинтегралната функция, пропорционален на $\frac{1}{u^2}$ ще интегрираме по части за да получим:
+\begin{equation}
+	\int_{-\infty}^\infty \frac{1}{2iu^2}e^{2ia\left(\frac{u}{\gamma^2}+\frac{1}{3}u^3\right)}du = a\int_{-\infty}^\infty \left(\frac{1}{\gamma^2 u} + u\right)e^{2ia\left(\frac{u}{\gamma^2}+\frac{1}{3}u^3\right)}du,
+\end{equation}
+което заместим в (А.43) ни дава:
+\begin{equation}
+	\int_{-\infty}^\infty \theta_\gamma^4 \text{K}^2_{\frac{2}{3}}\left(\frac{\omega\rho}{3 c}\theta_\gamma^3\right)d\theta = -\frac{3}{2}i\frac{\pi c}{\omega\rho}\int_{-\infty}^\infty du e^{2ia\left(\frac{u}{\gamma^2} + \frac{1}{3}u^3\right)}\left(\frac{3}{2}u + \frac{1}{2\gamma^2u}\right)
+\end{equation}
+Ще използваме отново интегралното представяне на функциите на Ейри и Бесел за да определим първият член като:
+\begin{equation}
+	\int_{-\infty}^\infty u e^{2ia\left(\frac{u}{\gamma^2} + \frac{1}{3}u^3\right)}du = \frac{2i}{\sqrt{3}\gamma^2}\text{K}_{\frac{2}{3}}\left(\frac{2\omega\rho}{3c\gamma^3}\right)
+\end{equation}
+За да пресметнем вторият челен, нека разгледаме подобен израз (използвайки отново интегралното представяне на $\text{K}_{\frac{1}{3}}$):
+\begin{equation}
+	\frac{d}{d\gamma^{\prime-2}}\int_{-\infty}^{\infty}\frac{1}{u}e^{2ia\left(\frac{u}{\gamma^{\prime2}} + \frac{1}{3}u^3\right)}du = \frac{2\pi i}{\sqrt{3}}\frac{\omega\rho}{c\gamma}\text{K}_{\frac{1}{3}}\left(\frac{2\omega\rho}{3c\gamma^{\prime3}}\right).
+\end{equation}
+Сега е удобно да въведем т.н. \emph{критична честота} $\omega_c = \frac{3\gamma^3c}{\rho}$ и промелнивата $\eta = \frac{2\omega\rho}{3c\gamma^3}$ . В термини на тях можем да интегрираме двете страни на (A.46) по $\gamma^{\prime-2}$ за да получим:
+\begin{equation}
+\int_{-\infty}^{\infty}\frac{1}{u}e^{2ia\left(\frac{u}{\gamma^2} + \frac{1}{3}u^3\right)}du = -\frac{2i}{\sqrt{3}}\int_{2\frac{\omega}{\omega_c}}^{\infty} \text{K}_{\frac{1}{3}}(\eta)d\eta,
+\end{equation}
+като тук трябва да се отбележи следното: Границите на интегрирането по $\gamma^\prime$ са избрани $[0, \gamma]$, където $\gamma$ съответства на "оригиналната"$\,$скорост на заряда, участваща в израз (А.44). Нефизичната стойност $\gamma = 0$ е избрана с цел тъждествено да получим обратно вторият член от (А.44) (но представен в термини на известна функция). Пресмятайки го в границата $\gamma\rightarrow 0$ виждаме, че експонентата става много бързо осцилираща, което занулява тази граница на интеграла. Знакът "минус"$\,$в (А.47) идва от размяната на границите на интеграла след преминаването към променливата $\eta$.\\
+Замествайки (A.47) и (A.45) в (А.44) получаваме:
+\begin{equation}
+		\int_{-\infty}^\infty \theta_\gamma^4 \text{K}^2_{\frac{2}{3}}\left(\frac{\omega\rho}{3 c}\theta_\gamma^3\right)d\theta = \frac{\sqrt{3}\pi c}{\omega\rho\gamma^2}\left(\frac{3}{2}\text{K}_{\frac{2}{3}}\left(2\frac{\omega}{\omega_c}\right) - \frac{1}{2}\int_{2\frac{\omega}{\omega_c}}^{\infty} \text{K}_{\frac{1}{3}}(\eta)d\eta\right).
+\end{equation}
+Тук е удобно да използваме рекурсивното свойство на функциите на Бесел $2\frac{d}{d\xi}\text{K}_{\frac{2}{3}}(\xi) + \text{K}_{\frac{5}{2}}(\xi) = - \text{K}_{\frac{1}{3}}(\xi)$, и да изразим (А.48) като:
+\begin{equation}
+		\int_{-\infty}^\infty \theta_\gamma^4 \text{K}^2_{\frac{2}{3}}\left(\frac{\omega\rho}{3 c}\theta_\gamma^3\right)d\theta = \frac{\sqrt{3}\pi c}{\gamma^2\omega\rho}\left(\text{K}_{\frac{2}{3}}\left(2\frac{\omega}{\omega_c}\right) + \int_{2\frac{\omega}{\omega_c}}^{\infty} \text{K}_{\frac{5}{3}}(\eta)d\eta\right)
+\end{equation}
+Заместваме това в израз (А.40) и получаваме крайният резултат:
+\begin{equation}
+	\boxed{\frac{dE}{d\omega}\bigg\vert_\parallel = \frac{\sqrt{3}q^2\beta^2}{8\pi\epsilon_0 c}\gamma\sin\alpha\left[\text{F}\left(2\frac{\omega}{\omega_c}\right) + \text{G}\left(2\frac{\omega}{\omega_c}\right)\right]}\,,
+\end{equation}
+където сме въвели функциите:
+\begin{equation}
+	\begin{split}
+	&\text{F}(x) = x\int_x^{\infty}\text{K}_{\frac{5}{3}}(\eta)d\eta\\
+	&\text{G}(x) = x\text{K}_{\frac{2}{3}}(x)
+	\end{split}
+\end{equation}
+\subsubsection{Пресмятане на $\frac{dE}{d\omega}\big\vert_\perp$}
+Подхождаме поп същият начин към изразяването на  $\text{K}^2_{\frac{1}{3}}\left(\frac{\omega\rho}{3 c}\theta_\gamma^3\right)$ в интегрална форма:
+\begin{equation}
+	\text{K}^2_{\frac{1}{3}}\left(\frac{\omega\rho}{3 c}\theta_\gamma^3\right) = 	\frac{3}{4}\frac{1}{\theta_\gamma^2}\int_{-\infty}^\infty \int_{-\infty}^\infty e^{ia\left(\theta_\gamma^2[x - y] + \frac{1}{3}[x^3 - y^3]\right)}dxdy
+\end{equation}
+Отново въвеждаме променливите $2u = x + y$ $2v = x - y$, заместваме в (А.52) и получаваме:
+\begin{equation}
+	\text{K}^2_{\frac{1}{3}}\left(\frac{\omega\rho}{3 c}\theta_\gamma^3\right) = 	\frac{3}{2}\frac{1}{\theta_\gamma^2}\int_{-\infty}^\infty du e^{2ia\left(\theta_\gamma^2 u + \frac{1}{3}u^3\right)}\int_{-\infty}^{\infty}e^{2iauv^2}dv.
+\end{equation}
+Този израз заместваме в (А.40) и извършваме интегриране по $v$, и после по $\theta$ за да получим:
+\begin{equation}
+	\int_{-\infty}^\infty \theta^2\theta_\gamma^2 \text{K}^2_{\frac{1}{3}}\left(\frac{\omega\rho}{3 c}\theta_\gamma^3\right)d\theta = -\frac{3\pi}{4}\left(\frac{c}{\omega\rho}\right)^2\int_{-\infty}^{\infty}\frac{1}{u^2} e^{2ia\left(\frac{u}{\gamma^2}+\frac{1}{3}u^3\right)}du
+\end{equation}
+Този израз вече пресметнахме в (А.44), Тогава можем директно да заместим изрази (А.46) и (А.48) за да получим:
+\begin{equation}
+	\int_{-\infty}^\infty \theta^2\theta_\gamma^2 \text{K}^2_{\frac{1}{3}}\left(\frac{\omega\rho}{3 c}\theta_\gamma^3\right)d\theta = \frac{\sqrt{3}\pi}{2}\frac{c}{\omega\rho \gamma^2}\left[\text{K}_{\frac{2}{3}}\left(2\frac{\omega}{\omega_c}\right) - \int_{2\frac{\omega}{\omega_c}}^\infty \text{K}_{\frac{1}{3}}(\eta)d\eta\right].
+\end{equation}
+Тук отново ще заместим $2\frac{d}{d\xi}\text{K}_{\frac{2}{3}}(\xi) + \text{K}_{\frac{5}{2}}(\xi) = - \text{K}_{\frac{1}{3}}(\xi)$ за да получим крайният израз:
+\begin{equation}
+	\boxed{\frac{dE}{d\omega}\bigg\vert_\perp = \frac{\sqrt{3}q^2\beta^2}{8\pi\epsilon_0 c}\gamma\sin\alpha\left[\text{F}\left(2\frac{\omega}{\omega_c}\right) - \text{G}\left(2\frac{\omega}{\omega_c}\right)\right]}
+\end{equation}
+\subsection{Функции на излъчване в Стоксов базис}
+
 \end{appendices}

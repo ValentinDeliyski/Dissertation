@@ -13,6 +13,7 @@
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{tikz, tikz-3dplot}
+\usepackage{braket}
 \usetikzlibrary{calc,angles,quotes, intersections, babel}
 
 \numberwithin{equation}{section}
@@ -27,17 +28,24 @@
 
 
 \begin{document}
-
+\lfoot{}
 \import{./Title_Page}{Title_page.tex}
-
+\lfoot{}
 \tableofcontents
 \listoffigures
 \newpage
+\lfoot{}
 \import{./Introduction}{Introduction.tex}
 \newpage
+\lfoot{}
 \import{./Section_1_Propagation_Of_EM_Waves}{Section_1_Propagation_Of_EM_Waves.tex}
+\newpage
+\lfoot{}
 \import{./Section_2_Emission_Medium}{Section_2_Emission_Medium.tex}
 \newpage
+\lfoot{}
+\newpage
 \import{./Appendix_1_Synchotron_Emission}{Appendix_1_Synchotron_Emission.tex}
+\lfoot{}
 
 \end{document}
