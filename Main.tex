@@ -1,4 +1,6 @@
-\documentclass[a4paper,11pt]{article}
+\documentclass[12pt]{article}
+\usepackage[a4paper,margin = 30mm, right = 30mm]{geometry}
+
 \usepackage{graphics}
 \usepackage{amsmath,latexsym, amssymb}
 \usepackage{mathtools}
@@ -21,6 +23,7 @@
 
 \DeclareMathOperator{\arccosh}{arcosh}
 
+
 \numberwithin{equation}{section}
 \numberwithin{figure}{section}
 \addto\captionsbulgarian{%
@@ -29,8 +32,8 @@
 }
 
 \cfoot{}
-\fancyhead[R]{\thepage}
 
+\fancyhead[R]{\thepage}
 
 \begin{document}
 \lfoot{}
@@ -60,6 +63,9 @@
 \newpage
 \lfoot{}
 \import{./Section_7_Polarized_Emission}{Section_7_Polarized_Emission.tex}
+\newpage
+\lfoot{}
+\import{./Section_8_Observing_Horizonless_Objects}{Section_8_Observing_Horizonless_Objects.tex}
 \newpage
 \lfoot{}
 \import{./Appendix_1_Synchotron_Emission}{Appendix_1_Synchotron_Emission.tex}
