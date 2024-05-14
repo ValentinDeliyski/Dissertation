@@ -19,6 +19,7 @@
 \usepackage{tikz, tikz-3dplot}
 \usepackage{braket}
 \usepackage{multirow}
+\usepackage[utf8]{inputenc}
 \usetikzlibrary{calc,angles,quotes, intersections, babel}
 
 \DeclareMathOperator{\arccosh}{arcosh}
@@ -44,6 +45,25 @@
 \listoftables
 \newpage
 \lfoot{}
+
+\nocite{EHT_M87_I,
+		EHT_M87_II,
+		EHT_M87_III,
+		EHT_M87_IV,
+		EHT_M87_V,
+		EHT_M87_VI,
+		EHT_M87_VII,
+		EHT_M87_VIII,
+		EHT_M87_IX,
+		EHT_SGR_I,
+		EHT_SGR_II,
+		EHT_SGR_III,
+		EHT_SGR_IV,
+		EHT_SGR_V,
+		EHT_SGR_VI,
+		EHT_SGR_VII,
+		EHT_SGR_VIII}
+
 \import{./Introduction}{Introduction.tex}
 \newpage
 \lfoot{}
@@ -70,5 +90,10 @@
 \lfoot{}
 \import{./Appendix_1_Synchotron_Emission}{Appendix_1_Synchotron_Emission.tex}
 \lfoot{}
+
+
+
+\bibliographystyle{unsrt}
+\bibliography{References}
 
 \end{document}
