@@ -1,0 +1,111 @@
+\begin{appendices}
+	
+	\section{Локален ортонормиран базис}
+	
+	Понеже всичките разгледани от нас метрики притежават аксиална симетрия базиса, който ще описва разглежданите от нас наблюдатели, ще бъде адаптиран към тази симетрия. Тя се изразява в метриката в това, че единственият не-нулев смесен член е $g_{t\phi}$. С оглед на това нека изберем анзац за локален ортонормиран базис в произволна точка от пространство-времето по следният начин:
+	
+	\begin{subequations}
+		\begin{equation}
+			e_{(t)}^\mu = \xi\delta_t^\mu + \gamma\delta_\phi^\mu
+		\end{equation}
+		\begin{equation}
+			e_{(r)}^\mu = C\delta_r^\mu
+		\end{equation}
+		\begin{equation}
+			e_{(\theta)}^\mu = D\delta_\theta^\mu
+		\end{equation}
+		\begin{equation}
+			e_{(\phi)}^\mu = A\delta_\phi^\mu + B\delta_t^\mu,
+		\end{equation}
+	\end{subequations}
+	
+	където неизвестните коефициенти ще определим от условията за ортонормираност:
+	
+	\begin{subequations}
+		\begin{equation}
+			g_{\mu\nu}e^\mu_{(\alpha)}e^\nu_{(\beta)} = \eta_{\alpha\beta}
+		\end{equation}
+		\begin{equation}
+			\eta_{\alpha\beta}e^{(\alpha)}_\mu e^{(\beta)}_\mu = g_{\mu\nu}
+		\end{equation}
+	\end{subequations}
+	
+	Те водят до следната система от уравнения:
+	
+	\begin{subequations}
+		\begin{equation}
+			g_{tt}\xi^2 + g_{\phi\phi}\gamma^2 + 2g_{t\phi}\xi\gamma = -1
+		\end{equation}
+		\begin{equation}
+			g_{rr}C^2 = 1
+		\end{equation}
+		\begin{equation}
+			g_{\theta\theta}D^2 = 1
+		\end{equation}
+		\begin{equation}
+			g_{\phi\phi}A^2 + g_{tt}B^2 + 2g_{t\phi}AB = 1
+		\end{equation}
+		\begin{equation}
+			g_{t\phi}\left[ A\xi + B\gamma \right] + g_{\phi\phi}A\gamma + g_{tt}B\xi = 0
+		\end{equation}
+	\end{subequations}
+	
+Тази система алгебрични уравнения има една нефиксирана степен на свобода, представлявайки въртене в равнината $\{t,\phi\}$. Стандартното допълнително условие което се налага в този случай е избора $B = 0$. Тогава физическата интерпретация на този базис е на наблюдател, който се движи по кръгова орбита с ъглова скорост $\omega_0 = -\frac{g_{t\phi}}{g_{\phi\phi}}$\footnote{Това следва от наблюдението, че произволна частица с нулев момент на импулса $L_z = p_\phi$, би има не-нулева координатна скорост $\dot{\phi}$:
+\begin{equation*}
+		p_\phi = g_{\phi t}p^t + g_{\phi\phi}p^\phi = 0 \rightarrow \frac{k^\phi}{k^t} = \dot{\phi} = -\frac{g_{t\phi}}{g_{\phi\phi}} \equiv \omega_0
+\end{equation*}}. Такъв наблюдател се нарича \emph{локално невъртящ се}. Явните изрази за базисните коефициенти са:
+
+\begin{subequations}
+	\begin{equation}
+		A = \frac{1}{\sqrt{g_{\phi\phi}}},\quad C = \frac{1}{\sqrt{g_{rr}}},\quad D = \frac{1}{\sqrt{g_{\theta\theta}}}
+	\end{equation}
+	\begin{equation}
+		\xi = \sqrt{\frac{g_{\phi\phi}}{g_{t\phi}^2 - g_{tt}g_{\phi\phi}}},\quad \gamma = -\omega_0\xi
+	\end{equation}
+\end{subequations}
+	
+Тогава можем да изразим компонентите на 4-импулса на частица в този базис като:
+
+\begin{subequations}
+	\begin{equation}
+		p^{(t)} = -e^\mu_{(t)}p_\mu = \xi E - \gamma L_z
+	\end{equation}
+	\begin{equation}
+		p^{(r)} = e^{\mu}_{(r)}p_\mu = \frac{p_r}{\sqrt{g_{rr}}} = |\vec{p}|\cos\alpha\cos\beta
+	\end{equation}
+	\begin{equation}
+		p^{(\theta)} = e_{(\theta)}^\mu p_\mu = \frac{p_\theta}{\sqrt{g_{\theta\theta}}} = |\vec{p}|\sin\beta
+	\end{equation}
+	\begin{equation}
+		p^{(\phi)} = e^\mu_{(\phi)}p_\mu = \frac{L_z}{\sqrt{g_{\phi\phi}}} = |\vec{p}|\sin\alpha\cos\beta
+	\end{equation}
+	\begin{equation}
+		\vec{p} = \left(p^{(r)},p^{(\theta)},p^{(\phi)}\right),
+	\end{equation}
+\end{subequations}	
+
+където сме дефинирали небесните ъглови координати $\{\alpha,\beta\}$. Пресметнати в наблюдателя, те параметреризират пресечната точка на тангентата към траекторията на частицата, с наблюдателната равнина. Можем също така да обърнем изразите (В.5б) - (В.5г) за да получим небесните координати като функция на импулса на частицата:
+
+\begin{subequations}
+	\begin{equation}
+		\alpha = \arctan\left(\frac{p^{(\phi)}}{p^{(r)}}\right)\bigg\vert_{\vec{r} = \vec{r}_\text{obs}}
+	\end{equation}
+	\begin{equation}
+		\beta = \arcsin\left(\frac{p^{(\theta)}}{|\vec{p}|}\right)\bigg\vert_{\vec{r} = \vec{r}_\text{obs}}.
+	\end{equation}
+\end{subequations}
+
+За нас от интерес представляват изразите (В.5) и (В.6) в случая на фотони - т.е. изотропни геодезични криви за които $|\vec{p}| = p^{(t)}$. Тогава изразите за небесните координати могат да се запишат като:
+
+\begin{subequations}
+	\begin{equation}
+		\alpha = \arctan\left(\sqrt{\frac{g_{rr}}{g_{\phi\phi}}}\frac{L_z}{k_r}\right)\bigg\vert_{\vec{r} = \vec{r}_\text{obs}}
+	\end{equation}
+	\begin{equation}
+		\beta = \arcsin\left(\frac{1}{\xi E - \gamma L_z}\frac{k_\theta}{\sqrt{g_{\theta\theta}}}\right)\bigg\vert_{\vec{r} = \vec{r}_\text{obs}}.
+	\end{equation}
+\end{subequations}
+
+Изразите (В.5б) - (В.5г) използваме при задаването на начални условия за уравненията на Хамилтон (Б.1а) и (Б.1б). При дефинирано зрително поле, обхождаме набора от $\{\alpha,\beta\}$ в него, генерирайки начални условия за всеки пиксел. Интересно е да се отбележи, че стойността на $|\vec{p}|$ в случая не влияе върху траекторията на фотоните, а само определя честотата им. Следователно можем да фиксираме $p^{(t)} = 1$ в общият случай. Още повече, самите динамични уравнения обикновено се дават в термини на специфични импулси - т.е. $k_\mu\rightarrow k_\mu / E$.
+
+\end{appendices}
