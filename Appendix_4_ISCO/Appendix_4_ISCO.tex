@@ -1,0 +1,136 @@
+\begin{appendices}
+	
+	\section{Общи сведения за екваториални орбити}
+	
+		Едно от най-важните свойства на пространство-времето от гледна точка на структурата на излъчващата среда е ISCO орбитата. Тя до много голяма степен определя вътрешната граница на акреционните дискове, поради което сме разгледали структурата на тези орбити в глава 4. Тук ще изведем общата форма на уравненията за тази орбита, в случая на аксиално-симетрични метрики, както и изрази за енергията, момента на импулса и ъгловата скорост на частици по кръгови екваториални орбити.
+		
+		\subsection{Най-вътрешната стабилна орбита (ISCO)}
+		
+		Нека разгледаме метрика от вида:
+		
+			\begin{equation}
+			g_{\mu\nu}=
+			\begin{pmatrix}
+				g_{tt} & 0 & 0 & g_{t\phi}\\
+				0 & g_{rr} & 0 & 0\\
+				0 & 0 & g_{\theta\theta} & 0\\
+				g_{t\phi} & 0 & 0 & g_{\phi\phi}
+			\end{pmatrix}
+			,\quad
+			g^{\mu\nu}=
+			\begin{pmatrix}
+				-\frac{g_{\phi\phi}}{g_2} & 0 & 0 & \frac{g_{t\phi}}{g_2}\\
+				0 & g_{rr}^{-1} & 0 & 0\\
+				0 & 0 & g_{\theta\theta}^{-1} & 0\\
+				\frac{g_{t\phi}}{g_2} & 0 & 0 & -\frac{g_{tt}}{g_2}
+			\end{pmatrix},
+		\end{equation}
+	
+	където $g_2 = g_{t\phi}^2 - g_{\phi\phi}g_{tt}$. Всяка частица, движеща се по времеподобна крива трябва да изпълнява условието за нормировка на своята четири-скорост:
+	
+	\begin{equation}
+		g_{\mu\nu}u^\mu u^\nu = g_{rr}\dot{r}^2 + g_{\theta\theta}\dot{\theta}^2 + g_{tt}\left(u^t\right)^2 + g_{\phi\phi}\left(u^\phi\right)^2 + 2g_{t\phi}u^tu^\phi,
+	\end{equation}
+	където производните на $r$ и $\theta$ са спрямо собственото време на частицата. Можем да се възползваме от Килинговите симетрии по $t$ и $\phi$ за да изразим $u^t$ и $u^\phi$ чрез енергията $E$ и азимуталният момент на импулса $L_z$:
+	
+	\begin{subequations}
+		\begin{equation}
+			g_{tt}\left(u^t\right)^2 = g_tt g^{t\mu}u_\mu g^{t\nu}u_\nu = \frac{g_{tt}}{(g_2)^{2}}\left(g_{\phi\phi}E + g_{t\phi}L_z\right)^2
+		\end{equation}
+		\begin{equation}
+			g_{\phi\phi}\left(u^\phi\right)^2 = g_{\phi\phi}g^{\phi\mu}u_\mu g^{\phi\nu}u_\nu = \frac{g_{\phi\phi}}{(g_2)^{2}}\left(g_{tt}L_z + g_{t\phi}E\right)^2
+		\end{equation}
+		\begin{equation}
+			g_{t\phi}u^t u^\phi = g_{t\phi}g^{t\mu}u_\mu g^{\phi\nu}u_\nu = \frac{g_{t\phi}}{(g_2)^2}\left(g_{\phi\phi} E + g_{t\phi}L_z\right)\left(g_{tt} L_z - g_{t\phi}E\right)
+		\end{equation}
+	\end{subequations}
+	
+	Заместваме тези изрази в (Г.2) и получаваме:
+	
+	\begin{equation}
+		g_{rr}\dot{r}^2 + g_{\theta\theta}\dot{\theta} - E^2\frac{g_{\phi\phi}}{g_2} - 2EL_z\frac{g_{t\phi}}{g_2} - L_z^2\frac{g_{tt}}{g_2} = -1
+	\end{equation}
+	
+	От тук можем да дефинираме ефективният радиален потенциал $V_\text{eff}$ като:
+	
+	\begin{equation}
+		V_\text{eff} = \frac{1}{g_{rr}g_2}\left[-g_2 + Eg_{\phi\phi} + 2EL_zg_{t\phi} + L_z^2g_{tt}\right],
+	\end{equation}
+	
+	с което да запишем уравнението за движение в екватора като:
+	
+	\begin{equation}
+		\dot{r}^2 = V_\text{eff}.
+	\end{equation}
+	
+	Условията за съществуване на ISCO тогава заемат формата:
+	
+	\begin{equation}
+		V_\text{eff}(r_\text{ISCO}) = 0,\quad \partial_r V_\text{eff}(r_\text{ISCO}) = 0,\quad \partial^2_r V_\text{eff}(r_\text{ISCO}) = 0
+	\end{equation}
+	
+	\newpage
+	
+	Пресмятаме втората производна на $V_\text{eff}$ и намираме\footnote{Тук може да отбележим, че величината $g_{rr}g_2$ е винаги положителна извън разгледаните компактните обекти, и следователно нейният логаритъм е добре дефиниран.}
+	
+		\begin{equation}
+			\begin{aligned}
+				\partial^2_r V_\text{eff} =& -V_\text{eff}\,\partial^2_r\ln(g_{rr}g_2) - 2\partial_r V_\text{eff}\partial_r\ln(g_{rr}g_2) + \\
+				&+\frac{1}{g_{rr}g_2}\left[-\partial^2_rg_2 + E\partial^2_rg_{\phi\phi} - 2EL_z\partial^2_rg_{t\phi} + L_z^2\partial^2_rg_{tt}\right] = 0.
+			\end{aligned}
+		\end{equation}
+
+	Сега ако използваме условията $V_\text{eff} = \partial_r V_\text{eff} = 0$ получаваме следното условие за ISCO орбитата:
+	
+	\begin{equation}
+		\frac{1}{g_{rr}g_2}\left[-\partial^2_rg_2 + E\partial^2_rg_{\phi\phi} - 2EL_z\partial^2_rg_{t\phi} + L_z^2\partial^2_rg_{tt}\right]\bigg\vert_{r = r_\text{ISCO}} = 0.
+	\end{equation}
+	
+	Алтернативно условие за ISCO можем да намерим, ако разгледаме системата уравнения, следващата от разделяне на променливите в уравнението на Хамилтън-Якоби:
+	
+	\begin{equation}
+		g_{rr}\dot{r}^2 = \pm\sqrt{R(r)}.
+	\end{equation}
+	
+	Налагайки същите изисквани върху $R(r) / g_{rr}^2$, като тези в (Г.7), би дало същото решение, като това на (Г.9).\\
+	
+	Нещо важно за отбелязване е, че целенасочено отчитаме множителя $g_{rr}^{-1}$ в разглежданията си (и дефиницията (7.5)). Съществуват пространства, при които повърхнината, задавана от $g_{rr}^{-1} = 0$ е регулярна и достижима за частиците. Такъв е например случая са пространствено-времевия тунел от глава 5, където орбитата, задавана тази повърхнина, e решение на системата (Г.7).\\
+	
+	\subsection{Обща форма на енергията, момента на импулса и ъгловата скорост за кръгови екваториални орбити}
+	
+	От интерес също представляват и изразите за $E = -u_t$, $L_z = u_\phi$ и $\Omega = \frac{d\phi}{dt} = \frac{\dot{\phi}}{\dot{t}}$ за кръгови екваториални орбити. За да ги намерим, нека разгледаме уравнението за движение по $\phi$, във формата на Лагранж-Ойлер, за Лагранжиана $\mathcal{L} = \frac{1}{2}g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu$:
+	
+	\begin{equation}
+		\partial_r \dot{t}^2 + 2 \partial_r\dot{t}\dot{\phi} + \partial_r\dot{\phi}^2 = 0,
+	\end{equation}
+	където сме отчели, че за кръгови орбити в екватора имаме $\dot{r} = \dot{\theta} = 0$. Третираме (Г.8) като квадратно уравнение за $\Omega$ и го решаваме за да намерим:
+	
+	\begin{equation}
+		\Omega(r) = -\frac{\partial g_{t\phi}}{\partial_r g_{\phi\phi}} \pm\frac{\sqrt{\left(\partial_r g_{t\phi}\right)^2 - \partial_rg_{tt}\partial_rg_{\phi\phi}}}{\partial_r g_{\phi\phi}},
+	\end{equation}
+	където знакът "плюс" съответства на движение по посока на въртенето на централният обект. Това е проява на ефекта на увличане. Всяка кръгова орбита по посока на въртенето на централният обект бива "забързана"$\,$ спрямо статичният ѝ случай, и обратното за орбити в противоположната посока на въртене. \\
+	
+	Използвайки Килинговите симетрии можем да изразим интегралите на движение $\{E,L_z\}$ през $\Omega$. Разглеждайки изразите:
+	\begin{subequations}
+		\begin{equation}
+			\frac{dt}{d\tau}=g^{t\mu}u_{\mu}=\frac{1}{g_2}\left(g_{\phi\phi}E+g_{t\phi}L_z\right)
+		\end{equation}
+		\begin{equation}
+			\frac{d\phi}{d\tau}=g^{\phi\mu}u_\mu=-\frac{1}{g_2}\left(g_{t\phi}E+g_{tt}L_z\right),
+		\end{equation}
+	\end{subequations}
+	можем да изведем следния израз за специфичният момент на импулса:
+	\begin{equation}
+		\frac{L_z}{E}=\ell=-\frac{g_{\phi\phi}\Omega+g_{t\phi}}{g_{tt}+g_{t\phi}\Omega}.
+	\end{equation}
+	Комбинирайки този израз с условието $V_\text{eff} = 0$, изразяваме интегралите на движение енергията $E$ и азимуталният момент на импулса $L_z$, като:
+	\begin{subequations}
+		\begin{equation}
+			E=-\frac{g_{tt}+g_{t\phi}\Omega}{\sqrt{-g_{tt}-2g_{t\phi}\Omega-g_{\phi\phi}\Omega^2}}
+		\end{equation}
+		\begin{equation}
+			L_z=\frac{g_{t\phi} +g_{\phi\phi}\Omega}{\sqrt{-g_{tt}-2g_{t\phi}\Omega-g_{\phi\phi}\Omega^2}}.
+		\end{equation}
+	\end{subequations}
+	
+\end{appendices}
