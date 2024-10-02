@@ -177,9 +177,9 @@
 	\end{equation}
 	\newpage
 	
-	Using the fact that $|\vec{k}| = k^{(t)} = E/\sqrt{-g_{tt}}$,  the form of the potential $R(r)$ in the static case\footnote{From the condition $k_\mu k^\mu = 0$ one can show that the potential $R(r)$ has the following form in the static case: $R(r) = -\frac{g_{rr}}{g_{tt}}\left(E^2 + \frac{g_{tt}}{g_{\phi\phi}}L_z^2\right) = -\frac{g_{rr}}{g_{tt}} V_\text{eff}$.}, we ca write (4.2) as:
+	Using the fact that $|\vec{k}| = k^{(t)} = E/\sqrt{-g_{tt}}$,  the form of the potential $R(r)$ in the static case\footnote{From the condition $k_\mu k^\mu = 0$ one can show that the potential $R(r)$ has the following form in the static case: $R(r) = -\frac{g_{rr}}{g_{tt}}\left(E^2 + \frac{g_{tt}}{g_{\phi\phi}}L_z^2\right) = -\frac{g_{rr}}{g_{tt}} V_\text{eff}$.}, we ca write (2.2) as:
 	\begin{equation}
-		\sin^2\sigma = \frac{\xi^2}{g_{rr}g_{\phi\phi}}\bigg\vert_{r = r_\text{obs}}.
+		\sin^2\sigma = -\frac{g_{tt}}{g_{\phi\phi}}\xi^2\bigg\vert_{r = r_\text{obs}}.
 	\end{equation}
 	
 	Let us now consider the angle $\delta$. One can show using spherical trigonometry \cite{Muller2009} that it is connected to the inclination $i$ of the observer and the azimuthal displacement of the photons $\Delta\phi = \phi(r_s) - \phi(r_\text{obs})$ via the expression:
@@ -191,7 +191,7 @@
 	One can also show that in static and spherically symmetric spacetimes (like the one we consider), the azimuthal displacement $\Delta\phi$ is given by the expression \cite{Muller2009}:
 
 	\begin{equation}
-		\Delta\phi(\xi,r_s,r_\text{obs}) = \fint_{r_\text{obs}}^{r_\text{s}}\frac{dr}{\sqrt{-\frac{1}{\xi^2}\frac{g^2_{\phi\phi}}{g_{tt}g_{rr}}V_\text{eff}}},\quad V_\text{eff} = 1 + \frac{g_{tt}}{g_{\phi\phi}}\xi^2,\quad \xi = \frac{L}{E}.
+		\Delta\phi(\xi,r_s,r_\text{obs}) = \fint_{r_\text{obs}}^{r_\text{s}}\frac{dr}{\sqrt{-\frac{1}{\xi^2}\frac{g^2_{\phi\phi}}{g_{tt}g_{rr}}(1 - V_\text{eff})}},\quad V_\text{eff} = -\frac{g_{tt}}{g_{\phi\phi}}\xi^2,\quad \xi = \frac{L}{E}.
 	\end{equation}
 	
 	\noindent where the symbol $\fint$ means that if between $r_s$ and $r_\text{obs}$ the ray passes a turning point, the integral must be split into two sections with opposite signs. Inverting (2.4) to express $\delta(\Delta\phi, i)$ we can write the following parametric expressions describing the shape of the images of a given emitting object:
@@ -201,7 +201,7 @@
 			\delta_n(\xi_n,r_s,r_\text{obs}) = \arcsin\left[\frac{\cot\left(\Delta\phi(\xi_n,r_s,r_\text{obs}) - n\pi\right)}{\tan i}\right]
 		\end{equation}
 		\begin{equation}
-			\sigma_n = \arcsin\left[\frac{\xi_n}{\sqrt{g_{rr}g_{\phi\phi}}}\right]\bigg\vert_{r = r_\text{obs}},
+			\sigma_n = \arcsin\left[\xi_n\sqrt{-\frac{g_{tt}}{g_{\phi\phi}}}\right]\bigg\vert_{r = r_\text{obs}},
 		\end{equation}
 		\begin{equation}
 			x_n = \sqrt{g_{\phi\phi}}\vert_{r=r_\text{obs}}\sigma_n\cos\delta_n,\,\,\,y_n = \sqrt{g_{\phi\phi}}\vert_{r=r_\text{obs}}\sigma_n\sin\delta_n,
@@ -408,7 +408,7 @@
 	\newpage
 	\subsection{Results}
 	
-	We start our study from the first main result of the authors in \cite{Narayan2021} - the fact that vertical magnetic fields cannot reproduce the observed morphology of the polarized images of M87$^*$, assuming that the object is a Schwarzschild back hole. We want to determine to what extent this result depends on the nature of the underlying spacetime. On figure 3.1 we show our results for the wormhole spacetime, described by the line element (2.1) (panel a and b) and for the Janis-Newman-Winicour naked singularity (panels c and d). The colormap corresponds to the one free parameter in the corresponding metrics, labeled $\gamma$.\\
+	We start our study from the first main result of the authors in \cite{Narayan2021} - the fact that vertical magnetic fields cannot reproduce the observed morphology of the polarized images of M87$^*$, assuming that the object is a Schwarzschild back hole. We want to determine to what extent this result depends on the nature of the underlying spacetime. On figure 3.1 we show our results for the wormhole spacetime, described by the line element (2.1) (panel a and b) and for the Janis-Newman-Winicour naked singularity on panels c and d (see section \emph{4.2} of the dissertation). The colormap corresponds to the one free parameter in the corresponding metrics, labeled $\gamma$.\\
 	
 	We see that up to a displacement of the visible position of the images, the general morphology remains unchanged. Both class exotic compact object generate polarized images which do not exhibit the characteristic for M87$^*$ twist of the polarization vector. Furthermore the apparent position of the maximum remains in the lower part of the image, which is inconsistent with observations (where this maximum is located on the right side of the image). We can therefore conclude that vertical magnetic fields are not compatible with the observations of M87$^*$, even considering exotic compact objects. Because of this we will focus our attention only on equatorial magnetic fields.\\
 
@@ -452,7 +452,7 @@
 			\caption{Wormhole,\\ $\vec{B} = [0.87, 0, 0.5]$, $\beta = 0.3$, $\chi = -150^\circ$, $i = 20^\circ$.} 
 		\end{subfigure}\\
 		\begin{subfigure}{17cm}
-			\hspace{-0.2em}
+			\hspace{-1em}
 			\includegraphics[scale = 0.15]{Section_7_Polarized_Emission/JNW_delta_figs_B_0.87_0.0_0.5_20_deg_direct.png}
 			\caption{Janis-Newman-Winicour naked singularity,\\  $\vec{B} = [0.87, 0, 0.5]$, $\beta = 0.3$, $\chi = -150^\circ$, $i = 20^\circ$.}
 		\end{subfigure}
@@ -516,24 +516,24 @@
 	\end{table}
 	
 	Let us now examine the \emph{indirect} images - more concretely the case of $n = 1$. They have the property that their apparent position changes drastically with the metric parameter $\gamma$. This has an important consequence: while the direct images of type 
-	${x, y}|_{X,Schw}$ exist for every value of $\gamma$, this not true for the indirect ones. In section \emph{6.2.2} and \emph{6.3.2} of the dissertation we have investigated the possible values for $\gamma$ that lead to the formation of indirect images of type ${x, y}|_{X,Schw}$. We show that in the case of the wormhole spacetime they exist for $1.8 \lessapprox \gamma \lessapprox 2.7$, while in the case of the Janis-Newman-Winicour solution, for $0.6 \lessapprox \gamma \le 1$. On figure 3.5 we show again the quantitative analysis of the deviations of these images, for an observational inclination $i = 20^\circ$.
+	$\{x, y\}|_{X,Schw}$ exist for every value of $\gamma$, this not true for the indirect ones. In section \emph{6.2.2} and \emph{6.3.2} of the dissertation we have investigated the possible values for $\gamma$ that lead to the formation of indirect images of type $\{x, y\}|_{X,Schw}$. We show that in the case of the wormhole spacetime they exist for $1.8 \lessapprox \gamma \lessapprox 2.7$, while in the case of the Janis-Newman-Winicour solution, for $0.6 \lessapprox \gamma \le 1$. On figure 3.5 we show again the quantitative analysis of the deviations of these images, for an observational inclination $i = 20^\circ$.
 	
 	\begin{figure}[!htb]
 		\begin{subfigure}{16cm}
 			\hspace{-1.0em}
-			\includegraphics[scale = 0.15]{Section_7_Polarized_Emission/WH_delta_fig_B_0.87_0.5_0_20_deg_r6_n1.png}
-			\caption{Wormhole,\\ $\vec{B} = [0.87, 0, 0.5]$, $\beta = 0.3$, $\chi = -150^\circ$, $i = 20^\circ$.} 
+			\includegraphics[scale = 0.15]{Section_7_Polarized_Emission/WH_delta_fig_B_0.5_0.87_0_20_deg_r6_n1.png}
+			\caption{Wormhole,\\ $\vec{B} = [0.5, 0, 0.87]$, $\beta = 0.3$, $\chi = -150^\circ$, $i = 20^\circ$.} 
 		\end{subfigure}\\
 		\begin{subfigure}{17cm}
 			\hspace{-1.0em}
-			\includegraphics[scale = 0.15]{Section_7_Polarized_Emission/JNW_delta_fig_B_0.87_0.5_0_20_deg_r6_n1.png}
-			\caption{Janis-Newman-Winicour naked singularity,\\  $\vec{B} = [0.87, 0, 0.5]$, $\beta = 0.3$, $\chi = -150^\circ$, $i = 20^\circ$.}
+			\includegraphics[scale = 0.15]{Section_7_Polarized_Emission/JNW_delta_fig_B_0.5_0.87_0_20_deg_r6_n1.png}
+			\caption{Janis-Newman-Winicour naked singularity,\\  $\vec{B} = [0.5, 0, 0.87]$, $\beta = 0.3$, $\chi = -150^\circ$, $i = 20^\circ$.}
 		\end{subfigure}
 		\caption[The polarized indirect images around wormholes and naked singularities for an equatorial magnetic field at $i = 20^\circ$.]{\small The constructed indirect polarized images of type $\{x,y\}\vert_{6M, \text{Schw}}$ around wormholes and naked singularities at an inclination $i = 20^\circ$. The black curves correspond to a Schwarzschild black hole.} 
 		\label{Inirect_image_deltas_20}
 	\end{figure}
 	
-	We see that the strong gravitational lensing effect leads to significant deviations in the images. The maximum deviation in intensity for the wormhole reaches $\max \Delta I_\text{WH} / I_{\text{Schw}} = 650\%$, while for the naked singularity we find$\max \Delta I_\text{JNW} / I_{\text{Schw}} = 6\times10^3\%$!\\
+	We see that the strong gravitational lensing effect leads to significant deviations in the images. The maximum deviation in intensity for the wormhole reaches $\max \Delta I_\text{WH} / I_{\text{Schw}} = 550\%$, while for the naked singularity we find$\max \Delta I_\text{JNW} / I_{\text{Schw}} = 6\times10^3\%$!\\
 	
 	We have to be careful when interpreting these extremely high deviations. The formation of these images for low values of $\gamma$ requires the photons to cross the emission region at very high radial coordinates $r_s\approx 10^3M$, where one would not expect a significant contribution to the emission. It is possible that this compensates the effect of the spacetime and a more realistic model of the emission medium would not produce such spikes in the intensity.\\
 	
